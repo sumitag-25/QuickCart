@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../shared/Layout/Index'
+import LayoutEl from '../shared/Layout/Index'
 
 function Admin() {
     return (
-        <Layout>
+        <LayoutEl>
             <div>Admin</div>
-        </Layout>
+        </LayoutEl>
     )
 }
 
