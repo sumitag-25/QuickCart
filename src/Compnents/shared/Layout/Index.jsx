@@ -21,17 +21,17 @@ const menus = [
   {
     key: '1',
     icon: <PieChartOutlined />,
-    label: 'Dashboard',
+    label: <Link to="/admin">Dashboad</Link>,
   },
   {
     key: '2',
     icon: <BarChartOutlined />,
-    label: 'Analytics',
+    label: <Link to="/admin/analytics">Analytics</Link>,
   },
   {
     key: '3',
     icon: <ShoppingCartOutlined />,
-    label: 'Inventry',
+    label: <Link to="/admin/inventry">Inventry</Link>,
   },
 ]
 
@@ -66,7 +66,7 @@ const items = [
 ]
 
 const LayoutEl = (data) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();

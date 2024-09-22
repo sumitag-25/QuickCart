@@ -1,7 +1,16 @@
 import React from 'react'
 import LayoutEl from '../shared/Layout/Index'
 import { Button, Card, Select } from 'antd'
-import { AudioOutlined, CommentOutlined, CopyOutlined, DesktopOutlined, EnvironmentOutlined, EyeOutlined, GiftOutlined, MoreOutlined, UsergroupAddOutlined } from '@ant-design/icons'
+import { AudioOutlined, 
+    CommentOutlined, 
+    CopyOutlined, 
+    DesktopOutlined, 
+    EnvironmentOutlined, 
+    EyeOutlined, 
+    GiftOutlined, 
+    MoreOutlined, 
+    UsergroupAddOutlined 
+} from '@ant-design/icons'
 import ReactApexChart from 'react-apexcharts'
 
 const productChart = {
@@ -411,7 +420,7 @@ function Admin() {
                 </Card>
                 <Card
                     className='shadow-md'
-                    title='Product Trend by Month'
+                    title='Followers'
                     
                 >
                     <ReactApexChart
