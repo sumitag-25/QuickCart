@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   PieChartOutlined,
   BarChartOutlined,
@@ -13,25 +13,43 @@ import {
   BellOutlined,
   SettingOutlined,
   LogoutOutlined,
+  HomeOutlined,
+  DeploymentUnitOutlined,
+  InboxOutlined,
 } from '@ant-design/icons';
 import { Avatar, Button, Dropdown, Layout, Menu, theme } from 'antd';
 const { Header, Sider, Content } = Layout;
 
 const menus = [
   {
-    key: '1',
+    key: '/admin',
     icon: <PieChartOutlined />,
     label: <Link to="/admin">Dashboad</Link>,
   },
   {
-    key: '2',
+    key: '/admin/analytics',
     icon: <BarChartOutlined />,
     label: <Link to="/admin/analytics">Analytics</Link>,
   },
   {
-    key: '3',
+    key: '/admin/inventry',
     icon: <ShoppingCartOutlined />,
     label: <Link to="/admin/inventry">Inventry</Link>,
+  },
+  {
+    key: '/admin/branding',
+    icon: <HomeOutlined />,
+    label: <Link to="/admin/branding">Branding</Link>,
+  },
+  {
+    key: '/admin/category',
+    icon: <DeploymentUnitOutlined />,
+    label: <Link to="/admin/category">Category</Link>,
+  },
+  {
+    key: '/admin/brand',
+    icon: <InboxOutlined />,
+    label: <Link to="/admin/brand">Brand</Link>,
   },
 ]
 
@@ -66,6 +84,11 @@ const items = [
 ]
 
 const LayoutEl = (data) => {
+  // reading pathname
+  const location = useLocation();
+  const {pathname} = location;
+  
+
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -92,7 +115,7 @@ const LayoutEl = (data) => {
         className='font-semibold mt-3'
           theme="light"
           mode="inline"
-          defaultSelectedKeys={['1']}
+          selectedKeys={[pathname]}
           items={menus}
         />
       </Sider>
