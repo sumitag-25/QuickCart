@@ -67,7 +67,7 @@ function Category() {
             <div className='grid md:grid-cols-3 gap-4'>
                 <Card
                     title={<h1 className='text-2xl font-semibold'>
-                        Create catrogry
+                        Create caterogry
                     </h1>}
                 >
                     <Form onFinish={onFinish} layout='vertical'>
@@ -87,7 +87,7 @@ function Category() {
                 </Card>
                 <Card className='md:col-span-2'
                     title={<h1 className='text-2xl font-semibold'>
-                        Create list
+                        Create caterogry
                     </h1>}
                 >
                     <Table columns={columns} dataSource={data} size="middle" />

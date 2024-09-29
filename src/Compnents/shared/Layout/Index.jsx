@@ -16,6 +16,8 @@ import {
   HomeOutlined,
   DeploymentUnitOutlined,
   InboxOutlined,
+  GiftOutlined,
+  ShoppingOutlined,
 } from '@ant-design/icons';
 import { Avatar, Button, Dropdown, Layout, Menu, theme } from 'antd';
 const { Header, Sider, Content } = Layout;
@@ -50,6 +52,16 @@ const menus = [
     key: '/admin/brand',
     icon: <InboxOutlined />,
     label: <Link to="/admin/brand">Brand</Link>,
+  },
+  {
+    key: '/admin/products',
+    icon: <ShoppingOutlined />,
+    label: <Link to="/admin/products">Products</Link>,
+  },
+  {
+    key: '/admin/area',
+    icon: <GiftOutlined />,
+    label: <Link to="/admin/area">Delivery Area</Link>,
   },
 ]
 

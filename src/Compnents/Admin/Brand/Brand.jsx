@@ -8,7 +8,7 @@ function Brand() {
     // get form data
     const onFinish = (value) => {
         console.log(value);
-        
+
     }
 
     const columns = [
@@ -34,7 +34,7 @@ function Brand() {
         {
             key: '1',
             category: 'John Brown',
-            brand:'Nokia',
+            brand: 'Nokia',
             createdAt: 32,
             action: (
                 <div className='flex gap-x-2'>
@@ -46,7 +46,7 @@ function Brand() {
         {
             key: '2',
             category: 'Jim Green',
-            brand:'Nokia',
+            brand: 'Nokia',
             createdAt: 42,
             action: (
                 <div className='flex gap-x-2'>
@@ -58,7 +58,7 @@ function Brand() {
         {
             key: '3',
             category: 'Joe Black',
-            brand:'Nokia',
+            brand: 'Nokia',
             createdAt: 32,
             action: (
                 <div className='flex gap-x-2'>
@@ -74,18 +74,31 @@ function Brand() {
             <div className='grid md:grid-cols-3 gap-4'>
                 <Card
                     title={<h1 className='text-2xl font-semibold'>
-                        Create catrogry
+                        Create Brand
                     </h1>}
+                    extra={
+                        <Select
+                            showSearch
+                            placeholder="Select a cateogry"
+                            optionFilterProp="label"
+                            options={[
+                                {
+                                    value: 'mobile',
+                                    label: 'Mobile',
+                                },
+                            ]}
+                        />
+                    }
                 >
                     <Form onFinish={onFinish} layout='vertical'>
                         <Form.Item
-                        label="Category"
-                        name="category"
-                        rules={[{required:true}]}
+                            label="Category"
+                            name="category"
+                            rules={[{ required: true }]}
                         >
                             <Select
                                 showSearch
-                                placeholder="Select a person"
+                                placeholder="Select a category"
                                 optionFilterProp="label"
                                 options={[
                                     {
@@ -111,7 +124,7 @@ function Brand() {
                 </Card>
                 <Card className='md:col-span-2'
                     title={<h1 className='text-2xl font-semibold'>
-                        Create list
+                        Brand list
                     </h1>}
                 >
                     <Table columns={columns} dataSource={data} size="middle" />

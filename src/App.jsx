@@ -12,6 +12,8 @@ import Inventry from './Compnents/Admin/Inventry/Inventry'
 import Branding from './Compnents/Admin/Branding/Branding'
 import Category from './Compnents/Admin/Category/Category'
 import Brand from './Compnents/Admin/Brand/Brand'
+import Products from './Compnents/Admin/Products/Products'
+import DeliveryArea from './Compnents/Admin/DeleveryArea/DeleveryArea'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +28,8 @@ function App() {
           <Route path='/admin/branding' element={<Branding/>} />
           <Route path='/admin/category' element={<Category/>} />
           <Route path='/admin/brand' element={<Brand/>} />
+          <Route path='/admin/products' element={<Products/>} />
+          <Route path='/admin/area' element={<DeliveryArea/>} />
           <Route path='/*' element={<NotFound />} />
 
         </Routes>
